@@ -1,0 +1,9 @@
+function [saveMeIn, saveMeOut] = createInputTXT(inputParams, savePath, p)
+
+cd(savePath)
+helperToCreateInputTXT(inputParams);
+path = strcat(erase(p, strcat(filesep, "matlab")), filesep, "c");
+cd(p)
+[saveMeIn, saveMeOut] = helperToCreateInputTXT(inputParams);
+
+end
